@@ -1,0 +1,33 @@
+extends: airbnb
+parser: babel-eslint
+plugins:
+ - react
+ - jest
+env:
+  browser: true
+  jest/globals: true
+rules:
+  react/prefer-stateless-function:
+    - 0
+  react/forbid-prop-types:
+    - 0
+  max-len:
+    - error
+    - 128
+  import/extensions:
+    - off
+    - never
+  class-methods-use-this:
+    - 0
+  import/no-unresolved:
+    - error
+    - ignore:
+      - "^spectrum-lightsuite"
+      - "react"
+      - "react-redux"
+      - "enzyme"
+      - "enzyme-to-json"
+  newline-per-chained-call:
+    - 0
+  no-shadow:
+    - 0
