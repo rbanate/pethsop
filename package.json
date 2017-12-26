@@ -1,8 +1,8 @@
 {
-  "name": "petshop",
+  "name": "@rlb/petshop",
   "version": "1.0.0",
   "description": "Petshop tutorial using Spectrum",
-  "main": "src/spectrum/index.js",
+  "main": "src/spectrum/index.jsx",
   "directories": {
     "test": "test"
   },
@@ -14,7 +14,6 @@
     "type": "git",
     "url": "git+ https://github.com/rbanate/petshop.git"
   },
- 
   "author": "",
   "license": "ISC",
   "dependencies": {

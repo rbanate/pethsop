@@ -21,7 +21,7 @@ const shop = getContract('PetShop', network);
 const initialState = { userRole: '0' };
 class PetShop extends Component {
   static propTypes = {
-    // web3Redux: PropTypes.object.isRequired,
+    web3Redux: PropTypes.object.isRequired,
     // keystores: PropTypes.array.isRequired,
     // networks: PropTypes.array.isRequired,
   }
@@ -40,9 +40,9 @@ class PetShop extends Component {
   //   }
   // }
 
-  // getContract({ abi, address }) {
-  //   return this.props.web3Redux.web3(network).eth.contract(abi).at(address);
-  // }
+  getContract({ abi, address }) {
+    return this.props.web3Redux.web3(network).eth.contract(abi).at(address);
+  }
   // getUserRoleId(address) {
   //   const directoryServiceContract = this.getContract(directoryService);
   //   return directoryServiceContract.get_user_role_id.call(address)
@@ -57,13 +57,13 @@ class PetShop extends Component {
     // const assetsExplorerContract = this.getContract(assets);
     // const { userRole } = this.state;
     // const isRoot = userRole === '1';
-
+    console.log('petShpContract', petShpContract);
     if (!petShpContract) { return null; }
     // TODO a menu system for different types
     const menu = [
       {
-        name: 'Asset Explorer',
-        path: 'assets-explorer',
+        name: 'Pet Shop',
+        path: 'pet-list',
         render: () => <PetList />,
       },
     ];

@@ -4,7 +4,7 @@ import { HashRouter } from 'react-router-dom';
 import TransactionSigningOverlay from 'spectrum-lightsuite/src/components/transactions/transaction_signing_overlay';
 // import registerReducers from 'spectrum-lightsuite/src/helpers/registerReducers';
 
-import PetShop from './components/petshop';
+import Shop from './components/petshop';
 import ScrollToTopRouter from './components/common/scroll_to_top_on_route';
 // import Footer from './components/common/footer';
 // import reducer from './reducer';
@@ -15,7 +15,7 @@ import ScrollToTopRouter from './components/common/scroll_to_top_on_route';
 //   digixPOA: { src: reducer },
 // });
 
-export default class PoA extends Component {
+export default class Index extends Component {
   static propTypes = {
 
   }
@@ -28,7 +28,7 @@ export default class PoA extends Component {
             <div
               className="pusher"
             >
-              <PetShop />
+              <Shop />
               {/* <Footer /> */}
             </div>
           </ScrollToTopRouter>
